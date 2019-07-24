@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SeguimientoDeProyectos
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
@@ -36,3 +37,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - generar un ciclo que recorra el json y grafique cada milestone de acuerdo a los issues
 - generar un ciclo que recorra el objeto json y grafique el proyecto
 
+=======
+# seguimiento-proyectos
+>>>>>>> d525f2774f4b97ee7996ca56a80edbc186ed8b17
