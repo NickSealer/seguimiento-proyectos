@@ -1,0 +1,75 @@
+<app-menu></app-menu>
+<div class="main-content">
+  <h1 class="text-center">
+    <a routerLink="/home" class="big"><i class="fa fa-arrow-circle-left"></i></a> {{project.name }}
+  </h1>
+  <hr><br>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8">
+      <h4 class="text-center">Milestones</h4>
+      <p-chart type="doughnut" [data]="dataProject" (onDataSelect)="selectData($event)"></p-chart>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4">
+      <h4 class="text-center">{{milestoneObject.title}}</h4>
+      <p-chart type="pie" [data]="data" data-toggle="modal" data-target="#myModal"></p-chart>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Issue</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Assigned</th>
+          <th scope="col">Start</th>
+          <th scope="col">End</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let statistic of statistics">
+        <tr>
+          <th>{{ statistic.title }}</th>
+          <td>{{ statistic.author ? statistic.author.name : 'No Author' }}</td>
+          <td>{{ statistic.assignee ? statistic.assignee.name : 'No Assined' }}</td>
+          <td>{{ statistic.created_at }}</td>
+          <td>{{ statistic.closed_at ? statistic.closed_at : 'No Ended yet' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Issues state</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Issue</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let issue of issuesState">
+                <td>{{issue.title}}</td>
+                <td>{{issue.state}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

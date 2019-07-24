@@ -1,0 +1,27 @@
+<aside class="sidebar-left-collapse">
+  <img src="/assets/img/pf_1563915453.jpg" class="img-fluid text-center" alt="logo">
+  <div class="sidebar-links">
+    <div class="link-yellow">
+      <a routerLink="/home">
+        <i class="fa fa-gitlab"></i>Projects
+      </a>
+      <ul class="sub-links">
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </div>
+
+    <div *ngIf="authenticated" class="link-green">
+      <a href="" (click)="auth.signOut()">
+        <i class="fa fa-sign-out"></i>Sign Out
+      </a>
+    </div>
+    <ng-template #login>
+      <div class="link-green">
+        <a routerLink="/login"><i class="fa fa-sign-in"></i>Login</a>
+      </div>
+    </ng-template>
+  </div>
+</aside>

@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+<div class="main-content">
+  <h1 class="text-center">
+    <a routerLink="/home" class="big"><i class="fa fa-arrow-circle-left"></i></a> {{project.name }}
+  </h1>
+  <hr><br>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-7">
+      <h4 class="text-center">Milestones</h4>
+      <p-chart type="doughnut" [data]="dataProject" (onDataSelect)="selectData($event)"></p-chart>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-5">
+      <h4 class="text-center">{{milestoneObject.title}}</h4>
+      <p-chart type="pie" [data]="data"></p-chart>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Issue</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Assigned</th>
+          <th scope="col">Start</th>
+          <th scope="col">End</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let statistic of statistics">
+        <tr>
+          <th scope="row">{{ statistic.title }}</th>
+          <td>{{ statistic.author ? statistic.author.name : 'No Author' }}</td>
+          <td>{{ statistic.assignee ? statistic.assignee.name : 'No Assined' }}</td>
+          <td>{{ statistic.created_at }}</td>
+          <td>{{ statistic.closed_at ? statistic.closed_at : 'No Ended yet' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

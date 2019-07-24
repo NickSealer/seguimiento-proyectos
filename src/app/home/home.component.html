@@ -1,0 +1,149 @@
+<app-menu></app-menu>
+
+<section id="project" class="main-content">
+  <div class="container">
+    <h5 class="section-title h1">OUR PROJECTS</h5>
+    <div class="row">
+      <!-- project -->
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <ng-template #image>
+                    <img class=" img-fluid" src="{{ project.avatar_url }}" width="250" alt="card image">
+                  </ng-template>
+                  <ng-template #noImage>
+                    <img class=" img-fluid" src="assets/img/logo-brm-colombia.jpg" width="250" alt="card image">
+                  </ng-template>
+                  <p *ngIf="project.avatar_url; then image; else noImage">
+                  </p>
+                  <h4 class="card-title">{{ project.name }}</h4>
+                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                  <a routerLink="/estelar" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <a routerLink="/estelar"><h4 class="card-title">{{ project.name }}</h4></a>
+                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                  <ul class="list-inline">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end project-->
+      <!-- project -->
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <ng-template #image>
+                    <img class=" img-fluid" src="{{ project.avatar_url }}" width="250" alt="card image">
+                  </ng-template>
+                  <ng-template #noImage>
+                    <img class=" img-fluid" src="assets/img/logo-brm-colombia.jpg" width="250" alt="card image">
+                  </ng-template>
+                  <p *ngIf="project.avatar_url; then image; else noImage">
+                  </p>
+                  <h4 class="card-title">Holcim</h4>
+                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                  <a routerLink="/holcim" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <a routerLink="/holcim"><h4 class="card-title">Holcim</h4></a>
+                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                  <ul class="list-inline">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end project-->
+      <!-- project -->
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <ng-template #image>
+                    <img class=" img-fluid" src="{{ project.avatar_url }}" width="250" alt="card image">
+                  </ng-template>
+                  <ng-template #noImage>
+                    <img class=" img-fluid" src="assets/img/logo-brm-colombia.jpg" width="250" alt="card image">
+                  </ng-template>
+                  <p *ngIf="project.avatar_url; then image; else noImage">
+                  </p>
+                  <h4 class="card-title">Kikes</h4>
+                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                  <a routerLink="kikes" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <a routerLink="/kikes"><h4 class="card-title">Kikes</h4></a>
+                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                  <ul class="list-inline">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end project-->
+      <!-- project -->
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+          <div class="mainflip">
+            <div class="frontside">
+              <div class="card">
+                <div class="card-body text-center">
+                  <ng-template #image>
+                    <img class=" img-fluid" src="{{ project.avatar_url }}" width="250" alt="card image">
+                  </ng-template>
+                  <ng-template #noImage>
+                    <img class=" img-fluid" src="assets/img/logo-brm-colombia.jpg" width="250" alt="card image">
+                  </ng-template>
+                  <p *ngIf="project.avatar_url; then image; else noImage">
+                  </p>
+                  <h4 class="card-title">Norma</h4>
+                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                  <a routerLink="/norma" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="backside">
+              <div class="card">
+                <div class="card-body text-center mt-4">
+                  <a routerLink="/norma"><h4 class="card-title">Norma</h4></a>
+                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                  <ul class="list-inline">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end project-->
+    </div>
+  </div>
+</section>

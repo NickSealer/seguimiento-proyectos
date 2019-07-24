@@ -1,0 +1,86 @@
+<div class="loginContainer">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-3">
+        <div class="avatarFrameoffline">
+          <img src="assets/img/MyAvatar.png" alt="" class="avatarImage img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+
+<!--Coded with love by Mutiullah Samim-->
+
+<body>
+  <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="user_card">
+        <div class="d-flex justify-content-center">
+          <div class="brand_logo_container">
+          </div>
+        </div>
+        <div class="d-flex justify-content-center form_container">
+          <form>
+            <div class="input-group mb-3">
+             
+              <input [(ngModel)]="email" type="text" name="email" class="form-control input_user" value=""
+                placeholder="email">
+            </div>
+            <div class="input-group mb-2">
+              
+              <input [(ngModel)]="password" type="password" name="password" class="form-control input_pass" value=""
+                placeholder="password">
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                <label class="custom-control-label" for="customControlInline">Remember me</label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!--  -->
+
+        <div *ngIf="auth.user$ | async as user; else login" class="">
+          <hr>
+          <div class="d-flex justify-content-center mt-3 login_container">
+            <button ALIGN="center" class="btn btn-dark" (click)="auth.signOut()">First sign Out</button>
+          </div>
+        </div>
+        <ng-template #login>
+          <div class="d-flex justify-content-center mt-3 login_container">
+            <button (click)="login()" type="button" name="button" class="btn btn-dark">Login</button>
+          </div>
+          <div ALIGN="center">Or</div>
+          <div class="d-flex justify-content-center mt-3 login_container">
+
+            <button class="btn btn-dark" (click)="auth.googleSignin()">Login with Google </button>
+          </div>
+        </ng-template>
+
+        <!--  -->
+
+
+        <div class="mt-4">
+          <div class="d-flex justify-content-center links">
+            Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+          </div>
+          <div class="d-flex justify-content-center links">
+            <a href="#">Forgot your password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<!-- hasta el minuto 7 del tutorial hace login con google -->

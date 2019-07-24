@@ -1,0 +1,59 @@
+<app-menu></app-menu>
+
+<!-- <div *ngFor="let issue of issues">
+{{ issue.title }}
+</div> -->
+
+<!-- charts -->
+
+<canvas baseChart
+[options]="pieChartOptions"
+><strong>Projects status</strong></canvas>
+
+<div class="container">
+  <div class="col-sm-12 text-center">
+    <h2 class="text-center">Estelar status</h2>
+    <canvas baseChart
+    [data]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-sm-12 text-center">
+    <h2 class="text-center">Holcim status</h2>
+    <canvas baseChart
+    [data]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-sm-12 text-center">
+    <h2 class="text-center">Kikes status</h2>
+    <canvas baseChart
+    [data]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-sm-12 text-center">
+    <h2 class="text-center">Norma status</h2>
+    <canvas baseChart
+    [data]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>
